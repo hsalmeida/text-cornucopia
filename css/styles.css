@@ -1,0 +1,10 @@
+body {
+    height: 100%;
+}
+
+.area-panel {
+    width: 100%;
+    height: 80%;
+    font-size: 10pt;
+    padding: 2px 7px;
+}
