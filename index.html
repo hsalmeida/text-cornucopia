@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="minimal-ui, initial-scale=1, maximum-scale=1, user-scalable=no, width=440">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <title>Cornucopia Text Tool</title>
-
     <link rel="stylesheet" href="css/assets/bootstrap.min.css" >
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -19,7 +19,7 @@
                       spellcheck="false" placeholder="Enter here the text or table with data to repeated"></textarea>
         </div>
         <div class="middle form-group" style="height: 200px;">
-            <label>Pattern</label>
+            <label>Pattern, use $ and a number, starts with 0, for each column.</label>
             <textarea class="panel area-panel" ng-model="pattern"
                       spellcheck="false" placeholder="Pattern"></textarea>
         </div>
@@ -27,7 +27,7 @@
             <div class="dashboard">
                 <button type="button" ng-click="execute()" class="btn btn-primary">Execute</button>
                 <span style="padding-left: 20px;">
-                    linhas: <span id="lines">{{lines}}</span>
+                    Lines: <span id="lines">{{lines}}</span>
                 </span>
                 <span style="padding-left: 20px;">
                     <label for="separator">Separator:</label>
