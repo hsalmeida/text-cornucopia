@@ -16,6 +16,10 @@ body {
     -o-transition: 0.3s 0.1s;
 }
 
+.main-text:hover {
+    transform: rotateY(180deg);
+}
+
 .main-icon:hover {
     transform: rotate(90deg);
     -ms-transform: rotate(90deg);
