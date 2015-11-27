@@ -1,5 +1,6 @@
 body {
     height: 100%;
+    background-color: #E0E0E0;
 }
 
 .area-panel {
@@ -7,4 +8,21 @@ body {
     height: 80%;
     font-size: 10pt;
     padding: 2px 7px;
+}
+
+.main-icon {
+    transition: 0.3s 0.1s;
+    -webkit-transition: 0.3s 0.1s;
+    -o-transition: 0.3s 0.1s;
+}
+
+.main-icon:hover {
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+@viewport {
+    width: device-width;
 }

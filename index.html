@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="minimal-ui, initial-scale=1, maximum-scale=1, user-scalable=no, width=440">
+    <meta name="viewport" content="minimal-ui, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <title>Cornucopia Text Tool</title>
     <link rel="stylesheet" href="css/assets/bootstrap.min.css" >
@@ -12,20 +12,29 @@
 <body>
 
     <div class="form-control" style="height: 100%" ng-controller="CornucopiaCtrl">
-        <h1 class="top">Cornucopia Text Tool</h1>
+        <div style="position: relative; padding-left: 50%">
+            <img class="main-icon" ng-src="img/apple-icon-60x60.png">
+        </div>
+        <h1 class="top" style="text-align: center">Cornucopia Text Tool</h1>
+
         <div class="top form-group" style="height: 200px;">
             <label>Table or Text</label>
-            <textarea class="panel area-panel" ng-model="panel"
+            <span class="pull-right">Number of lines: {{panelLines}}</span>
+            <textarea class="panel area-panel" ng-model="panel" ng-change="auto()"
                       spellcheck="false" placeholder="Enter here the text or table with data to repeated"></textarea>
         </div>
         <div class="middle form-group" style="height: 200px;">
             <label>Pattern, use $ and a number, starts with 0, for each column.</label>
-            <textarea class="panel area-panel" ng-model="pattern"
+            <span class="pull-right">Number of lines: {{patternLines}}</span>
+            <textarea class="panel area-panel" ng-change="auto()" ng-model="pattern"
                       spellcheck="false" placeholder="Pattern"></textarea>
         </div>
         <div class="bottom form-group" style="height: 200px;">
             <div class="dashboard">
                 <button type="button" ng-click="execute()" class="btn btn-primary">Execute</button>
+                <span style="padding-left: 20px;">
+                    <input id="auto" ng-model="chAuto" type="checkbox"><label for="auto">auto</label>
+                </span>
                 <span style="padding-left: 20px;">
                     Lines: <span id="lines">{{lines}}</span>
                 </span>
@@ -43,7 +52,7 @@
             </div>
             <label>Results</label>
             <textarea class="panel area-panel" ng-model="results"
-                      spellcheck="false" placeholder="Results"></textarea>
+                      spellcheck="false" placeholder="Results will go there :)"></textarea>
         </div>
     </div>
 
