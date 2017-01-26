@@ -35,8 +35,8 @@ var cornucopia = angular.module('cornucopia', [])
             lines.forEach(function(line){
                 var elements = line.split($scope.separator);
                 var copyPattern = String($scope.pattern);
-                for(var i in elements) {
-                    var repStr = new String('\\$' + i);
+                for(var i = 0; i < elements.length ; i++) {
+                    var repStr = '\\$' + i;
                     var re = new RegExp(repStr, 'gim');
                     copyPattern = copyPattern.replace(re, elements[i].trim());
                 }
